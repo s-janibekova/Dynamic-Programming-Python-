@@ -1,0 +1,13 @@
+def count_prime_num(n):
+    numbers = [True]*(n+1)
+    answer = 0 
+    for i in range(2, n+1):
+        if numbers[i]:
+            answer+=1
+        for j in range(i*i, n+1, i):
+            numbers[j] = False
+    
+    return answer
+    
+    
+count_prime_num(10)
